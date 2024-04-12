@@ -7,5 +7,5 @@
 	url = https://github.com/Neel1302/verifiable-compositional-rl.git
 
 [submodule "mission-schema"]
-	path = verifiable-compositional-rl
+	path = mission-schema
 	url = https://github.com/darpa-ansr/mission-schema.git

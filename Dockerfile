@@ -5,7 +5,7 @@ WORKDIR /home/performer/dev_ws
 # RUN apt-get update && apt-get install -y ros-humble-geometry-msgs
 # Generally, putting these requirements higher in the file allows you to cache the results and reduce build times!
 
-# Switch to the root user so we can install dependencies.
+# Switch to the root user so we can install all dependencies.
 USER 0:0
 RUN apt-get update && apt-get -y upgrade
 RUN apt install -y python3-pip gedit ros-humble-cv-bridge ros-humble-vision-opencv
