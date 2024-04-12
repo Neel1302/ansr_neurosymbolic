@@ -1,0 +1,11 @@
+[submodule "ta3-documentation"]
+	path = ta3-documentation
+	url = https://github.com/darpa-ansr/ta3-documentation.git
+
+[submodule "verifiable-compositional-rl"]
+	path = verifiable-compositional-rl
+	url = https://github.com/Neel1302/verifiable-compositional-rl.git
+
+[submodule "mission-schema"]
+	path = verifiable-compositional-rl
+	url = https://github.com/darpa-ansr/mission-schema.git

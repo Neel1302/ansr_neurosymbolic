@@ -1,0 +1,50 @@
+# version: "3.8"
+services:
+  adk:
+    image: darpaansr.azurecr.io/adk:latest
+    volumes:
+      - "/tmp/.X11-unix:/tmp/.X11-unix:rw"
+      - "./adk/mission_briefing:/mission_briefing"
+      - "./adk/output:/output"
+    command: "--mission_thread=perception_thread"
+    ipc: host
+    pid: host
+    environment:
+      - DISPLAY
+      - ROS_SECURITY_ENABLE=false
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+  development-env:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ipc: host
+    pid: host
+    container_name: development-env
+    # Equivalent to `--interactive --tty` or `-it` for docker run
+    stdin_open: true
+    tty: true
+    command: /bin/bash
+    volumes:
+      - "./src/ansr_hello_world_py:/home/performer/dev_ws/src/ansr_hello_world_py"
+      - "./ta3-documentation/ros2/adk_interface:/home/performer/dev_ws/src/adk_interfaces"
+      - "./ta3-documentation/ros2/airsim_interfaces:/home/performer/dev_ws/src/airsim_interfaces"
+      - "./ta3-documentation/sros2/airsim_keystore:/airsim_keystore"
+      - "./adk/mission_briefing:/mission_briefing"
+    environment:
+      - ROS_SECURITY_ENCLAVE_OVERRIDE=/airsim/adk_key
+      - ROS_SECURITY_KEYSTORE=/airsim_keystore
+      - ROS_SECURITY_ENABLE=false
+      - ROS_SECURITY_STRATEGY=Enforce
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [ gpu ]

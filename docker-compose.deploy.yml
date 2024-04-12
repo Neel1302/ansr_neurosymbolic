@@ -1,0 +1,33 @@
+version: "3.8"
+services:
+  adk:
+    image: darpaansr.azurecr.io/adk:latest
+    volumes:
+      - "/tmp/.X11-unix:/tmp/.X11-unix:rw"
+      - "./adk/mission_briefing:/mission_briefing"
+      - "./adk/output:/output"
+    command: "--mission_thread=manuever_thread --mission_class=area_search --use_mission_briefing --restart"
+    ipc: host
+    pid: host
+    environment:
+      - DISPLAY
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+  deployment:
+    image: ansr-hello-world
+    ipc: host
+    pid: host
+    volumes:
+      - "./adk/mission_briefing:/home/performer/dev_ws/src/mission_briefing"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [ gpu ]
