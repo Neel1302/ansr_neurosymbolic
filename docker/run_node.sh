@@ -1,2 +1,4 @@
 #!/bin/bash
-ros2 run ansr_hello_world_py publisher # Replace this line with the command required to run your node
+source "/home/performer/dev_ws/install/setup.bash"
+python3 "/home/performer/dev_ws/src/verifiable-compositional-rl/src/ansr_eval1/waypoint_publisher.py"
+

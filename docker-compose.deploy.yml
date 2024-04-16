@@ -1,4 +1,5 @@
 version: "3.8"
+name: ansr-collins
 services:
   adk:
     image: darpaansr.azurecr.io/adk:latest
@@ -6,7 +7,8 @@ services:
       - "/tmp/.X11-unix:/tmp/.X11-unix:rw"
       - "./adk/mission_briefing:/mission_briefing"
       - "./adk/output:/output"
-    command: "--mission_thread=manuever_thread --mission_class=area_search --use_mission_briefing --restart"
+    command: "--mission_thread=manuever_thread --mission_class=area_search --restart" # Comment when using custom mission config
+    # command: "--mission_thread=manuever_thread --mission_class=area_search --use_mission_briefing --restart" # Uncomment to use custom mission config
     ipc: host
     pid: host
     environment:
@@ -19,7 +21,7 @@ services:
               count: 1
               capabilities: [gpu]
   deployment:
-    image: ansr-hello-world
+    image: ansr-collins
     ipc: host
     pid: host
     volumes:

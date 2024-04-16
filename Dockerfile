@@ -44,13 +44,14 @@ COPY ./ta3-documentation/ros2/airsim_interfaces /home/performer/dev_ws/src/airsi
 USER 1001:1001
 
 # Copy our custom packages to the workspace:
-COPY ./src/ansr_hello_world_py /home/performer/dev_ws/src/ansr_hello_world_py
+# COPY ./src/ansr_hello_world_py /home/performer/dev_ws/src/ansr_hello_world_py
 # Download our model weights so we can burn them into the docker image.
-RUN ["/bin/bash", "-c", "python3 /home/performer/dev_ws/src/ansr_hello_world_py/scripts/download_weights.py"]
+# RUN ["/bin/bash", "-c", "python3 /home/performer/dev_ws/src/ansr_hello_world_py/scripts/download_weights.py"]
 
 # Add additional packages here!
 COPY ./verifiable-compositional-rl /home/performer/dev_ws/src/verifiable-compositional-rl
 COPY ./mission-schema /home/performer/dev_ws/src/mission-schema
+COPY ./submission_info /submission_info
 
 # Build all the packages
 RUN ["/bin/bash", "-c", "source /opt/ros/humble/setup.bash && colcon build --symlink-install"]
