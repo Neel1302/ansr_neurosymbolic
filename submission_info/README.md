@@ -17,13 +17,53 @@ the packages built into the container.
   ```
   docker compose -f docker-compose.deploy.yml up
   ```
+  
+A sample deploy docker compose file is as follows:
+
+  ```
+  version: "3.8"
+  name: ansr-collins
+  services:
+    adk:
+      image: darpaansr.azurecr.io/adk:latest
+      volumes:
+        - "/tmp/.X11-unix:/tmp/.X11-unix:rw"
+        - "./adk/mission_briefing:/mission_briefing"
+        - "./adk/output:/output"
+      command: "--mission_thread=manuever_thread --mission_class=area_search --restart" # Comment when using custom mission config
+      # command: "--mission_thread=manuever_thread --mission_class=area_search --use_mission_briefing --restart" # Uncomment to use custom mission config
+      ipc: host
+      pid: host
+      environment:
+        - DISPLAY
+      deploy:
+        resources:
+          reservations:
+            devices:
+              - driver: nvidia
+                count: 1
+                capabilities: [gpu]
+    deployment:
+      image: ansr-collins
+      ipc: host
+      pid: host
+      volumes:
+        - "./adk/mission_briefing:/mission_briefing"
+      deploy:
+        resources:
+          reservations:
+            devices:
+              - driver: nvidia
+                count: 1
+                capabilities: [ gpu ]
+  ```
 
 Our code is automatically executed when the docker container is deployed and we achieve this using the `ros_node.sh` script with runs the following commands in the `deployment` container:
 
-```
-source "/home/performer/dev_ws/install/setup.bash"
-python3 "/home/performer/dev_ws/src/verifiable-compositional-rl/src/ansr_eval1/waypoint_publisher.py"
-```
+  ```
+  source "/home/performer/dev_ws/install/setup.bash"
+  python3 "/home/performer/dev_ws/src/verifiable-compositional-rl/src/ansr_eval1/waypoint_publisher.py"
+  ```
 
 Since we are a manuever thread performer for evaluation 1, you may echo the `adk_node/input/waypoints` topic to view the waypoints we publish.
     
