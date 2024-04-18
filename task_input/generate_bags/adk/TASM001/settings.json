@@ -1,0 +1,117 @@
+{
+    "SeeDocsAt": "https://github.com/Microsoft/AirSim/blob/main/docs/settings_json.md",
+    "SettingsVersion": 1.2,
+    "SimMode": "Multirotor",
+    "ClockSpeed": 1.0,
+    "TimeOfDay": {
+        "Enabled": false,
+        "StartDateTime": "2024-02-12 21:30:00",
+        "CelestialClockSpeed": 1,
+        "StartDateTimeDst": false,
+        "UpdateIntervalSecs": 60
+    },
+    "OriginGeopoint": {
+        "Latitude": 38.8816,
+        "Longitude": -77.091,
+        "Altitude": 100
+    },
+    "Vehicles": {
+        "SimpleFlight": {
+            "VehicleType": "SimpleFlight",
+            "DefaultVehicleState": "Armed",
+            "EnableCollisionPassthrogh": false,
+            "EnableCollisions": true,
+            "AllowAPIAlways": true,
+            "RC": {
+                "RemoteControlID": 0,
+                "AllowAPIWhenDisconnected": false
+            },
+            "Cameras": {
+                "front_center_custom": {
+                    "CaptureSettings": [
+                        {
+                            "PublishToRos": 1,
+                            "ImageType": 0,
+                            "Width": 640,
+                            "Height": 480,
+                            "FOV_Degrees": 60,
+                            "DepthOfFieldFstop": 2.8,
+                            "DepthOfFieldFocalDistance": 200.0,
+                            "DepthOfFieldFocalRegion": 200.0,
+                            "TargetGamma": 1.5,
+                            "detection radius meters": 25.0
+                        },
+                        {
+                            "PublishToRos": 1,
+                            "ImageType": 2,
+                            "Width": 640,
+                            "Height": 480,
+                            "FOV_Degrees": 60,
+                            "TargetGamma": 1.5
+                        },
+                        {
+                            "PublishToRos": 1,
+                            "ImageType": 1,
+                            "Width": 640,
+                            "Height": 480,
+                            "FOV_Degrees": 60,
+                            "TargetGamma": 1.5
+                        },
+                        {
+                            "PublishToRos": 1,
+                            "ImageType": 3,
+                            "Width": 640,
+                            "Height": 480,
+                            "FOV_Degrees": 60,
+                            "TargetGamma": 1.5
+                        },
+                        {
+                            "PublishToRos": 1,
+                            "ImageType": 5,
+                            "Width": 640,
+                            "Height": 480,
+                            "FOV_Degrees": 60,
+                            "TargetGamma": 1.5
+                        },
+                        {
+                            "PublishToRos": 1,
+                            "ImageType": 7,
+                            "Width": 640,
+                            "Height": 480,
+                            "FOV_Degrees": 60,
+                            "TargetGamma": 1.5
+                        }
+                    ],
+                    "X": 0.4,
+                    "Y": 0,
+                    "Z": -0.2,
+                    "Pitch": 0,
+                    "Roll": 0,
+                    "Yaw": 0
+                }
+            }
+        },
+        "car4006": {
+            "VehicleType": "envcar",
+            "X": 0.0,
+            "Y": -40.0,
+            "Z": -1.5,
+            "Yaw": 9.423981633974483,
+            "ChassisMesh": "/Script/Engine.StaticMesh'/Game/Shelby/Shelby_chassis.Shelby_chassis'",
+            "WheelMesh": "/Script/Engine.StaticMesh'/Game/Shelby/Shelby_wheel.Shelby_wheel'",
+            "DistanceBetweenAxes": 380,
+            "DistanceBetweenWheels": 200,
+            "Scale": 1.0,
+            "MaterialPath": "/Script/Engine.Material'/AirSim/VehicleAdv/SUV/AutomotiveMaterials/Materials/CarPaint/M_Carpaint_green.M_Carpaint_green'",
+            "MaterialElementIndex": 8
+        }
+    },
+    "SubWindows": [
+        {
+            "WindowID": 1,
+            "CameraName": "front_center_custom",
+            "ImageType": 0,
+            "Visible": false
+        }
+    ]
+}

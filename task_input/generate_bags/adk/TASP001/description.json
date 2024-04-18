@@ -1,0 +1,92 @@
+{
+    "scenario_id": "TASP001",
+    "mission_class": "Area Search",
+    "scenario_objective": {
+        "objective_name": "locate static target",
+        "routes_of_interest": [],
+        "areas_of_interest": [
+            {
+                "polygon_vertices": [
+                    [
+                        [
+                            20,
+                            -60
+                        ],
+                        [
+                            -20,
+                            -60
+                        ],
+                        [
+                            -20,
+                            -20
+                        ],
+                        [
+                            20,
+                            -20
+                        ],
+                        [
+                            20,
+                            -60
+                        ]
+                    ]
+                ],
+                "no_earlier_than": [],
+                "no_later_than": []
+            }
+        ],
+        "entities_of_interest": [
+            {
+                "entity_id": "car4006",
+                "entity_type": "Car",
+                "attributes": {
+                    "color": "green",
+                    "class": "SEDAN"
+                },
+                "priority": 1,
+                "no_earlier_than": [],
+                "no_later_than": [],
+                "entity_priors": {
+                    "last_known_location": [],
+                    "last_known_movement_direction": [],
+                    "location_belief_map": [
+                        {
+                            "polygon_vertices": [
+                                [
+                                    [
+                                        20,
+                                        -60
+                                    ],
+                                    [
+                                        -20,
+                                        -60
+                                    ],
+                                    [
+                                        -20,
+                                        -20
+                                    ],
+                                    [
+                                        20,
+                                        -20
+                                    ],
+                                    [
+                                        20,
+                                        -60
+                                    ]
+                                ]
+                            ],
+                            "probability": 1
+                        }
+                    ]
+                },
+                "entity_trajectory": {
+                    "trajectory_file": [],
+                    "speed": [],
+                    "start_time": []
+                }
+            }
+        ]
+    },
+    "scenario_constraints": [],
+    "scenario_thread": "perception_thread",
+    "pre_mission_context": []
+}

@@ -34,6 +34,8 @@ ENV ROS_SECURITY_ENCLAVE_OVERRIDE=/airsim/adk_key
 ENV ROS_SECURITY_KEYSTORE=/airsim_keystore
 ENV ROS_SECURITY_ENABLE=false
 ENV ROS_SECURITY_STRATEGY=Enforce
+ENV MAP_ALTITUDE=15
+
 
 # Copy the ADK interfaces to the ROS workspace
 COPY ./ta3-documentation/ros2/adk_interface /home/performer/dev_ws/src/adk_interfaces

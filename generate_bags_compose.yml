@@ -1,0 +1,76 @@
+version: "3.8"
+services:
+  adk:
+    # image: darpaansr.azurecr.io/adk:latest
+    image: darpaansr.azurecr.io/adk:2.1.5
+    volumes:
+      - ./task_input/generate_bags/adk/${SCENARIO_ID:?error}/:/mission_briefing
+      - ./task_input/generate_bags/adk/healthcheck.sh:/healthcheck.sh
+      - ./task_output/generate_bags/adk/adk_output:/output
+      - "/tmp/.X11-unix:/tmp/.X11-unix:rw"
+    command: "--mission_thread=${MISSION_THREAD:?error} --use_mission_briefing"
+    ipc: host
+    pid: host
+    environment:
+      - ROS_DOMAIN_ID=0
+      - ROS_SECURITY_ENABLE=false
+      - MAP_ALTITUDE
+      - DISPLAY
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    # entrypoint: /bin/bash
+    # tty: True
+    # stdin_open: True
+    # restart: always
+    healthcheck:
+      test: /healthcheck.sh
+      # test: /healthcheck.sh
+      interval: 10s
+      timeout: 20s
+      retries: 3
+
+  recorder:
+    image: darpaansr.azurecr.io/tester:latest
+    entrypoint: ["/input/record_entrypoint.sh", "${MISSION_THREAD}"]
+    # entrypoint: /bin/bash
+    # tty: True
+    # stdin_open: True
+    ipc: host
+    pid: host
+    volumes:
+      - ./task_input/generate_bags/recorder:/input
+      - ./task_output/generate_bags/recorder:/bag_root
+    environment:
+      - ROS_DOMAIN_ID=0
+      - ROS_SECURITY_ENABLE=false
+      - TIMEOUT=${TIMEOUT:?error}
+    
+    depends_on:
+      adk:
+        condition: service_healthy
+      performer:
+        condition: service_started
+  performer:
+    image: ${TA1_IMAGE:?error}
+    volumes: 
+      - ./task_input/generate_bags/performer/${SCENARIO_ID:?error}/:/mission_briefing
+    ipc: host
+    pid: host
+    environment:
+      - ROS_DOMAIN_ID=0
+      - ROS_SECURITY_ENABLE=false
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [ gpu ]
+    depends_on:
+      adk:
+        condition: service_healthy

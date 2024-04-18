@@ -1,0 +1,140 @@
+{
+    "entities_of_interest": [
+        {
+            "entity_id": "car4006",
+            "entity_type": "Car",
+            "attributes": {
+                "color": "green",
+                "class": "SEDAN"
+            }
+        }
+    ],
+    "controllable_vehicles": [
+        {
+            "id": "quad123",
+            "type": "quadrotor",
+            "vehicle_attributes": {
+                "rotor_count": 4,
+                "arm_length_meters": 0.2275,
+                "mass_kg": 1.0,
+                "abdomen_dimension_x_meters": 0.18,
+                "abdomen_dimension_y_meters": 0.11,
+                "abdomen_dimension_z_meters": 0.04,
+                "quadrotor_symmetric_X_pattern_angles_deg": [
+                    45.0,
+                    225.0,
+                    315.0,
+                    135.0
+                ],
+                "linear_drag_coefficient": 0.325,
+                "angular_drag_coeffcient": 0.325,
+                "restitution": 0.55,
+                "friction": 0.5,
+                "battery_life_minutes": 10.0,
+                "max_speed_meters_per_second": 1.0
+            },
+            "sensor_payloads": [
+                {
+                    "name": "front_center_custom",
+                    "position_XYZ_NED": [
+                        0.4,
+                        0,
+                        -0.2
+                    ],
+                    "orientation_pitch_roll_yaw": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "frames": [
+                        {
+                            "PublishToRos": 1,
+                            "ImageType": 0,
+                            "Width": 640,
+                            "Height": 480,
+                            "FOV_Degrees": 60,
+                            "DepthOfFieldFstop": 2.8,
+                            "DepthOfFieldFocalDistance": 200.0,
+                            "DepthOfFieldFocalRegion": 200.0,
+                            "TargetGamma": 1.5,
+                            "detection radius meters": 25.0,
+                            "image_type": "Scene"
+                        },
+                        {
+                            "PublishToRos": 1,
+                            "ImageType": 2,
+                            "Width": 640,
+                            "Height": 480,
+                            "FOV_Degrees": 60,
+                            "TargetGamma": 1.5,
+                            "image_type": "DepthPerspective"
+                        },
+                        {
+                            "PublishToRos": 1,
+                            "ImageType": 1,
+                            "Width": 640,
+                            "Height": 480,
+                            "FOV_Degrees": 60,
+                            "TargetGamma": 1.5,
+                            "image_type": "DepthPlanar"
+                        },
+                        {
+                            "PublishToRos": 1,
+                            "ImageType": 3,
+                            "Width": 640,
+                            "Height": 480,
+                            "FOV_Degrees": 60,
+                            "TargetGamma": 1.5,
+                            "image_type": "DepthVis"
+                        },
+                        {
+                            "PublishToRos": 1,
+                            "ImageType": 5,
+                            "Width": 640,
+                            "Height": 480,
+                            "FOV_Degrees": 60,
+                            "TargetGamma": 1.5,
+                            "image_type": "Segmentation"
+                        },
+                        {
+                            "PublishToRos": 1,
+                            "ImageType": 7,
+                            "Width": 640,
+                            "Height": 480,
+                            "FOV_Degrees": 60,
+                            "TargetGamma": 1.5,
+                            "image_type": "Infrared"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "scenario_id": "TASP001",
+    "scenario_desc_file_name": "/mission_briefing/description.json",
+    "sim_length_minutes": 1.0,
+    "controllable_vehicle_start_loc": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "flight_altitude": 10.0,
+    "safe_maneuver_path": "/mission_briefing/path.csv",
+    "environment": {
+        "weather_parameter": {
+            "fog": 0.0,
+            "wind_body_frame_NED": [
+                0,
+                0,
+                0
+            ],
+            "rain": 0,
+            "snow": 0.0,
+            "dust": 0.0,
+            "foliage": 0,
+            "road_snow": 0.0,
+            "randomize": false
+        },
+        "time_of_day": {}
+    }
+}

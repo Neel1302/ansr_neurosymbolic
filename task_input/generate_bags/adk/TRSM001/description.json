@@ -1,0 +1,105 @@
+{
+    "scenario_id": "TSRM001",
+    "mission_class": "Route Search",
+    "scenario_objective": {
+        "objective_name": "locate static target",
+        "routes_of_interest": [
+            {
+                "route_points": [
+                    [
+                        [
+                            60.0,
+                            0
+                        ],
+                        [
+                            -60,
+                            0
+                        ]
+                    ]
+                ],
+                "route_search_band": 20,
+                "no_earlier_than": [],
+                "no_later_than": [],
+                "enclosing_rectangles": [
+                    [
+                        [
+                            60,
+                            20
+                        ],
+                        [
+                            -60,
+                            20
+                        ],
+                        [
+                            -60,
+                            -20
+                        ],
+                        [
+                            60,
+                            -20
+                        ],
+                        [
+                            60,
+                            20
+                        ]
+                    ]
+                ]
+            }
+        ],
+        "areas_of_interest": [],
+        "entities_of_interest": [
+            {
+                "entity_id": "car4006",
+                "entity_type": "Car",
+                "attributes": {
+                    "color": "green",
+                    "class": "SEDAN"
+                },
+                "priority": 1,
+                "no_earlier_than": [],
+                "no_later_than": [],
+                "entity_priors": {
+                    "last_known_location": [],
+                    "last_known_movement_direction": [],
+                    "location_belief_map": [
+                        {
+                            "polygon_vertices": [
+                                [
+                                    [
+                                        60,
+                                        20
+                                    ],
+                                    [
+                                        -60,
+                                        20
+                                    ],
+                                    [
+                                        -60,
+                                        -20
+                                    ],
+                                    [
+                                        60,
+                                        -20
+                                    ],
+                                    [
+                                        60,
+                                        20
+                                    ]
+                                ]
+                            ],
+                            "probability": 1
+                        }
+                    ]
+                },
+                "entity_trajectory": {
+                    "trajectory_file": [],
+                    "speed": [],
+                    "start_time": []
+                }
+            }
+        ]
+    },
+    "scenario_constraints": [],
+    "scenario_thread": "maneuver_thread",
+    "pre_mission_context": []
+}
