@@ -78,7 +78,7 @@ Run the following in one terminal:
 
  ```
  cd ta3-documentation
- sh start_adk_sparse_manuever_headless.sh
+ sh start_adk_sparse_manuever.sh --mission_thread=manuever_thread -f 20
  ```
 
 In another terminal run the following compose file using: `docker compose -f docker-compose.deploy.yml up`:
