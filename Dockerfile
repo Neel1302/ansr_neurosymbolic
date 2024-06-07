@@ -9,7 +9,9 @@ WORKDIR /home/performer/dev_ws
 USER 0:0
 RUN apt-get update && apt-get -y upgrade
 RUN apt install -y python3-pip gedit ros-humble-cv-bridge ros-humble-vision-opencv
-RUN apt install ros-humble-tf-transformations
+RUN apt install -y ros-humble-tf-transformations
+RUN apt-get update -y --fix-missing
+RUN apt install -y ros-humble-rviz2
 
 # Install python dependencies.
 RUN ["/bin/bash", "-c", "pip3 --default-timeout=200 install torch torchvision transformers[torch] Pillow opencv-python"]

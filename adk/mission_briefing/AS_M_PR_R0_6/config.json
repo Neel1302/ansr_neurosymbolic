@@ -4,13 +4,13 @@
       "entity_id": "car000",
       "entity_type": "car",
       "attributes": {
-        "color": "red",
-        "class": "SUV"
+        "color": "blue",
+        "class": "SEDAN"
       },
       "location_ground_truth": [
-        -33.0,
-        -100.75,
-        0.0
+        45.75,
+        79.25,
+        1.5707963267948966
       ],
       "entity_trajectory": {
         "trajectory_file": "/mission_briefing/target_0_traj.csv",
@@ -22,12 +22,12 @@
       "entity_id": "car001",
       "entity_type": "car",
       "attributes": {
-        "color": "green",
+        "color": "black",
         "class": "SEDAN"
       },
       "location_ground_truth": [
-        84.0,
-        91.75,
+        -65.75,
+        -42.75,
         3.141592653589793
       ],
       "entity_trajectory": {
@@ -40,13 +40,13 @@
       "entity_id": "car002",
       "entity_type": "car",
       "attributes": {
-        "color": "blue",
-        "class": "SEDAN"
+        "color": "yellow",
+        "class": "SUV"
       },
       "location_ground_truth": [
-        -46.75,
-        -56.75,
-        3.141592653589793
+        18.25,
+        89.25,
+        1.5707963267948966
       ],
       "entity_trajectory": {
         "trajectory_file": "/mission_briefing/target_2_traj.csv",
@@ -58,13 +58,13 @@
       "entity_id": "car003",
       "entity_type": "car",
       "attributes": {
-        "color": "blue",
+        "color": "violet",
         "class": "SUV"
       },
       "location_ground_truth": [
-        -40.75,
-        -94.25,
-        3.141592653589793
+        -73.25,
+        -25.25,
+        -1.5707963267948966
       ],
       "entity_trajectory": {
         "trajectory_file": "/mission_briefing/target_3_traj.csv",
@@ -144,20 +144,20 @@
       ]
     }
   ],
-  "scenario_id": "AS_M_PR_R2_6",
+  "scenario_id": "AS_M_PR_R0_6",
   "scenario_desc_file_name": "/mission_briefing/description.json",
   "sim_length_minutes": 5.0,
   "controllable_vehicle_start_loc": [
-    123.0,
-    -121.5,
-    -0.5530644470433872
+    153.5,
+    -109.5,
+    0.020910112337397813
   ],
   "flight_altitude": 10.0,
   "environment": {
     "weather_parameter": {
       "fog": 0.0,
       "rain": 0.0,
-      "snow": 0.6241302165809938,
+      "snow": 0.0,
       "dust": 0.0,
       "foliage": 0.0,
       "road_snow": 0.0,
@@ -165,7 +165,7 @@
     },
     "time_of_day": {
       "Enabled": true,
-      "StartDateTime": "2024-02-12 08:15:00"
+      "StartDateTime": "2024-02-12 09:44:51"
     }
   },
   "entities_of_non_interest": "/mission_briefing/entities_of_non_interest.csv"

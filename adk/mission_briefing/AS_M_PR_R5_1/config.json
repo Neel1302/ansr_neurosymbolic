@@ -8,9 +8,9 @@
         "class": "SUV"
       },
       "location_ground_truth": [
-        -33.0,
-        -100.75,
-        0.0
+        66.25,
+        91.5,
+        3.141592653589793
       ],
       "entity_trajectory": {
         "trajectory_file": "/mission_briefing/target_0_traj.csv",
@@ -23,12 +23,12 @@
       "entity_type": "car",
       "attributes": {
         "color": "green",
-        "class": "SEDAN"
+        "class": "SUV"
       },
       "location_ground_truth": [
-        84.0,
-        91.75,
-        3.141592653589793
+        18.25,
+        89.25,
+        -1.5707963267948966
       ],
       "entity_trajectory": {
         "trajectory_file": "/mission_briefing/target_1_traj.csv",
@@ -44,9 +44,9 @@
         "class": "SEDAN"
       },
       "location_ground_truth": [
-        -46.75,
-        -56.75,
-        3.141592653589793
+        61.0,
+        61.75,
+        1.5707963267948966
       ],
       "entity_trajectory": {
         "trajectory_file": "/mission_briefing/target_2_traj.csv",
@@ -58,12 +58,12 @@
       "entity_id": "car003",
       "entity_type": "car",
       "attributes": {
-        "color": "blue",
+        "color": "orange",
         "class": "SUV"
       },
       "location_ground_truth": [
-        -40.75,
-        -94.25,
+        84.0,
+        91.75,
         3.141592653589793
       ],
       "entity_trajectory": {
@@ -144,20 +144,20 @@
       ]
     }
   ],
-  "scenario_id": "AS_M_PR_R2_6",
+  "scenario_id": "AS_M_PR_R5_1",
   "scenario_desc_file_name": "/mission_briefing/description.json",
   "sim_length_minutes": 5.0,
   "controllable_vehicle_start_loc": [
-    123.0,
-    -121.5,
-    -0.5530644470433872
+    -53.5,
+    129.0,
+    -0.560573114528018
   ],
   "flight_altitude": 10.0,
   "environment": {
     "weather_parameter": {
       "fog": 0.0,
       "rain": 0.0,
-      "snow": 0.6241302165809938,
+      "snow": 0.0,
       "dust": 0.0,
       "foliage": 0.0,
       "road_snow": 0.0,

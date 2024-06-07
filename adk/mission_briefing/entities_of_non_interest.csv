@@ -1,0 +1,11 @@
+id,type,color,x,y,z,yaw
+non_target_0,SEDAN,black,106.75,51,0,3.141592653589793
+non_target_1,SUV,black,-96.75,-154,0,-1.5707963267948966
+non_target_2,SEDAN,yellow,-44,-80.5,0,1.5707963267948966
+non_target_3,SEDAN,red,-2.25,-143.25,0,0
+non_target_4,SEDAN,white,-40.75,-100.5,0,1.5707963267948966
+non_target_5,SUV,orange,-18.25,-118,0,0
+non_target_6,SUV,yellow,-12.75,-168.5,0,1.5707963267948966
+non_target_7,SUV,white,-49,-58.75,0,1.5707963267948966
+non_target_8,SEDAN,orange,24,-92,0,0
+non_target_9,SUV,green,-49.75,-91.25,0,3.141592653589793
