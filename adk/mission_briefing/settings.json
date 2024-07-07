@@ -1,0 +1,311 @@
+{
+    "SeeDocsAt": "https://github.com/Microsoft/AirSim/blob/main/docs/settings_json.md",
+    "SettingsVersion": 1.2,
+    "SimMode": "Multirotor",
+    "ClockSpeed": 1.0,
+    "TimeOfDay": {
+        "Enabled": false,
+        "StartDateTime": "2024-02-12 21:30:00",
+        "CelestialClockSpeed": 1,
+        "StartDateTimeDst": false,
+        "UpdateIntervalSecs": 60
+    },
+    "OriginGeopoint": {
+        "Latitude": 38.8816,
+        "Longitude": -77.091,
+        "Altitude": 100
+    },
+    "Vehicles": {
+        "SimpleFlight": {
+            "VehicleType": "SimpleFlight",
+            "DefaultVehicleState": "Armed",
+            "EnableCollisionPassthrogh": false,
+            "EnableCollisions": true,
+            "AllowAPIAlways": true,
+            "RC": {
+                "RemoteControlID": 0,
+                "AllowAPIWhenDisconnected": false
+            },
+            "Cameras": {
+                "front_center_custom": {
+                    "CaptureSettings": [
+                        {
+                            "PublishToRos": 1,
+                            "ImageType": 0,
+                            "Width": 640,
+                            "Height": 480,
+                            "FOV_Degrees": 60,
+                            "DepthOfFieldFstop": 2.8,
+                            "DepthOfFieldFocalDistance": 200.0,
+                            "DepthOfFieldFocalRegion": 200.0,
+                            "TargetGamma": 1.5,
+                            "detection radius meters": 25.0
+                        },
+                        {
+                            "PublishToRos": 1,
+                            "ImageType": 2,
+                            "Width": 640,
+                            "Height": 480,
+                            "FOV_Degrees": 60,
+                            "TargetGamma": 1.5
+                        },
+                        {
+                            "PublishToRos": 1,
+                            "ImageType": 1,
+                            "Width": 640,
+                            "Height": 480,
+                            "FOV_Degrees": 60,
+                            "TargetGamma": 1.5
+                        },
+                        {
+                            "PublishToRos": 1,
+                            "ImageType": 3,
+                            "Width": 640,
+                            "Height": 480,
+                            "FOV_Degrees": 60,
+                            "TargetGamma": 1.5
+                        },
+                        {
+                            "PublishToRos": 1,
+                            "ImageType": 5,
+                            "Width": 640,
+                            "Height": 480,
+                            "FOV_Degrees": 60,
+                            "TargetGamma": 1.5
+                        },
+                        {
+                            "PublishToRos": 1,
+                            "ImageType": 7,
+                            "Width": 640,
+                            "Height": 480,
+                            "FOV_Degrees": 60,
+                            "TargetGamma": 1.5
+                        }
+                    ],
+                    "X": 0.4,
+                    "Y": 0,
+                    "Z": -0.2,
+                    "Pitch": 0,
+                    "Roll": 0,
+                    "Yaw": 0
+                }
+            }
+        },
+        "car4009": {
+            "VehicleType": "envcar",
+            "X": -119.25,
+            "Y": -49.75,
+            "Z": -0.0,
+            "Yaw": 0.0,
+            "Scale": 1.2,
+            "MaterialPath": "/Script/Engine.Material'/AirSim/VehicleAdv/SUV/AutomotiveMaterials/Materials/CarPaint/M_Carpaint_blue.M_Carpaint_blue'",
+            "MaterialElementIndex": 1
+        },
+        "car4010": {
+            "VehicleType": "envcar",
+            "X": -129.75,
+            "Y": 60.25,
+            "Z": -0.0,
+            "Yaw": 90.0,
+            "Scale": 1.2,
+            "MaterialPath": "/Script/Engine.Material'/AirSim/VehicleAdv/SUV/AutomotiveMaterials/Materials/CarPaint/M_Carpaint_violet.M_Carpaint_violet'",
+            "MaterialElementIndex": 1
+        },
+        "car4011": {
+            "VehicleType": "envcar",
+            "X": -168.25,
+            "Y": -154.25,
+            "Z": -0.0,
+            "Yaw": 0.0,
+            "Scale": 1.2,
+            "MaterialPath": "/Script/Engine.Material'/AirSim/VehicleAdv/SUV/AutomotiveMaterials/Materials/CarPaint/M_Carpaint_blue.M_Carpaint_blue'",
+            "MaterialElementIndex": 1
+        },
+        "car4012": {
+            "VehicleType": "envcar",
+            "X": 166.75,
+            "Y": -144.75,
+            "Z": -0.0,
+            "Yaw": 180.0,
+            "Scale": 1.2,
+            "MaterialPath": "/Script/Engine.Material'/AirSim/VehicleAdv/SUV/AutomotiveMaterials/Materials/CarPaint/M_Carpaint_yellow.M_Carpaint_yellow'",
+            "MaterialElementIndex": 1
+        },
+        "car4013": {
+            "VehicleType": "envcar",
+            "X": 178.25,
+            "Y": 33.75,
+            "Z": -0.0,
+            "Yaw": 180.0,
+            "Scale": 1.2,
+            "MaterialPath": "/Script/Engine.Material'/AirSim/VehicleAdv/SUV/AutomotiveMaterials/Materials/CarPaint/M_Carpaint_orange.M_Carpaint_orange'",
+            "MaterialElementIndex": 1
+        },
+        "car4014": {
+            "VehicleType": "envcar",
+            "X": -16.25,
+            "Y": 169.25,
+            "Z": -0.0,
+            "Yaw": 0.0,
+            "Scale": 1.2,
+            "MaterialPath": "/Script/Engine.Material'/AirSim/VehicleAdv/SUV/AutomotiveMaterials/Materials/CarPaint/M_Carpaint_white.M_Carpaint_white'",
+            "MaterialElementIndex": 1
+        },
+        "car4015": {
+            "VehicleType": "envcar",
+            "X": -165.25,
+            "Y": 122.25,
+            "Z": -0.3,
+            "Yaw": 180.0,
+            "ChassisMesh": "/Script/Engine.StaticMesh'/Game/Shelby/Shelby_chassis.Shelby_chassis'",
+            "WheelMesh": "/Script/Engine.StaticMesh'/Game/Shelby/Shelby_wheel.Shelby_wheel'",
+            "DistanceBetweenAxes": 380,
+            "DistanceBetweenWheels": 200,
+            "Scale": 1.0,
+            "MaterialPath": "/Script/Engine.Material'/AirSim/VehicleAdv/SUV/AutomotiveMaterials/Materials/CarPaint/M_Carpaint_blue.M_Carpaint_blue'",
+            "MaterialElementIndex": 8
+        },
+        "car4016": {
+            "VehicleType": "envcar",
+            "X": -88.25,
+            "Y": -168.75,
+            "Z": -0.0,
+            "Yaw": 180.0,
+            "Scale": 1.2,
+            "MaterialPath": "/Script/Engine.Material'/AirSim/VehicleAdv/SUV/AutomotiveMaterials/Materials/CarPaint/M_Carpaint_blue.M_Carpaint_blue'",
+            "MaterialElementIndex": 1
+        },
+        "car4017": {
+            "VehicleType": "envcar",
+            "X": -173.25,
+            "Y": -81.75,
+            "Z": -0.0,
+            "Yaw": 0.0,
+            "Scale": 1.2,
+            "MaterialPath": "/Script/Engine.Material'/AirSim/VehicleAdv/SUV/AutomotiveMaterials/Materials/CarPaint/M_Carpaint_white.M_Carpaint_white'",
+            "MaterialElementIndex": 1
+        },
+        "car4018": {
+            "VehicleType": "envcar",
+            "X": 83.75,
+            "Y": -133.25,
+            "Z": -0.45,
+            "Yaw": 180.0,
+            "ChassisMesh": "/Script/Engine.StaticMesh'/Game/Shelby/Shelby_chassis.Shelby_chassis'",
+            "WheelMesh": "/Script/Engine.StaticMesh'/Game/Shelby/Shelby_wheel.Shelby_wheel'",
+            "DistanceBetweenAxes": 380,
+            "DistanceBetweenWheels": 200,
+            "Scale": 1.0,
+            "MaterialPath": "/Script/Engine.Material'/AirSim/VehicleAdv/SUV/AutomotiveMaterials/Materials/CarPaint/M_Carpaint_orange.M_Carpaint_orange'",
+            "MaterialElementIndex": 8
+        },
+        "car4019": {
+            "VehicleType": "envcar",
+            "X": 38.25,
+            "Y": -133.75,
+            "Z": -0.1,
+            "Yaw": 180.0,
+            "Scale": 1.2,
+            "MaterialPath": "/Script/Engine.Material'/AirSim/VehicleAdv/SUV/AutomotiveMaterials/Materials/CarPaint/M_Carpaint_violet.M_Carpaint_violet'",
+            "MaterialElementIndex": 1
+        },
+        "car4020": {
+            "VehicleType": "envcar",
+            "X": 125.25,
+            "Y": -53.25,
+            "Z": -0.0,
+            "Yaw": 90.0,
+            "Scale": 1.2,
+            "MaterialPath": "/Script/Engine.Material'/AirSim/VehicleAdv/SUV/AutomotiveMaterials/Materials/CarPaint/M_Carpaint_white.M_Carpaint_white'",
+            "MaterialElementIndex": 1
+        },
+        "car4021": {
+            "VehicleType": "envcar",
+            "X": 134.75,
+            "Y": -4.75,
+            "Z": -0.1,
+            "Yaw": 90.0,
+            "Scale": 1.2,
+            "MaterialPath": "/Script/Engine.Material'/AirSim/VehicleAdv/SUV/AutomotiveMaterials/Materials/CarPaint/M_Carpaint_red.M_Carpaint_red'",
+            "MaterialElementIndex": 1
+        },
+        "car4022": {
+            "VehicleType": "envcar",
+            "X": 30.75,
+            "Y": 132.25,
+            "Z": -0.1,
+            "Yaw": 180.0,
+            "Scale": 1.2,
+            "MaterialPath": "/Script/Engine.Material'/AirSim/VehicleAdv/SUV/AutomotiveMaterials/Materials/CarPaint/M_Carpaint_white.M_Carpaint_white'",
+            "MaterialElementIndex": 1
+        },
+        "car4023": {
+            "VehicleType": "envcar",
+            "X": -67.75,
+            "Y": 132.25,
+            "Z": -0.1,
+            "Yaw": 0.0,
+            "Scale": 1.2,
+            "MaterialPath": "/Script/Engine.Material'/AirSim/VehicleAdv/SUV/AutomotiveMaterials/Materials/CarPaint/M_Carpaint_orange.M_Carpaint_orange'",
+            "MaterialElementIndex": 1
+        },
+        "car4024": {
+            "VehicleType": "envcar",
+            "X": -122.75,
+            "Y": 70.75,
+            "Z": -0.1,
+            "Yaw": 90.0,
+            "Scale": 1.2,
+            "MaterialPath": "/Script/Engine.Material'/AirSim/VehicleAdv/SUV/AutomotiveMaterials/Materials/CarPaint/M_Carpaint_red.M_Carpaint_red'",
+            "MaterialElementIndex": 1
+        },
+        "car4025": {
+            "VehicleType": "envcar",
+            "X": -2.25,
+            "Y": -111.75,
+            "Z": -0.0,
+            "Yaw": 90.0,
+            "Scale": 1.2,
+            "MaterialPath": "/Script/Engine.Material'/AirSim/VehicleAdv/SUV/AutomotiveMaterials/Materials/CarPaint/M_Carpaint_white.M_Carpaint_white'",
+            "MaterialElementIndex": 1
+        },
+        "car4026": {
+            "VehicleType": "envcar",
+            "X": -19.75,
+            "Y": 1.75,
+            "Z": -0.0,
+            "Yaw": 0.0,
+            "Scale": 1.2,
+            "MaterialPath": "/Script/Engine.Material'/AirSim/VehicleAdv/SUV/AutomotiveMaterials/Materials/CarPaint/M_Carpaint_violet.M_Carpaint_violet'",
+            "MaterialElementIndex": 1
+        },
+        "car4027": {
+            "VehicleType": "envcar",
+            "X": 77.25,
+            "Y": -17.75,
+            "Z": -0.0,
+            "Yaw": 90.0,
+            "Scale": 1.2,
+            "MaterialPath": "/Script/Engine.Material'/AirSim/VehicleAdv/SUV/AutomotiveMaterials/Materials/CarPaint/M_Carpaint_orange.M_Carpaint_orange'",
+            "MaterialElementIndex": 1
+        },
+        "car4028": {
+            "VehicleType": "envcar",
+            "X": -71.25,
+            "Y": -1.75,
+            "Z": -0.0,
+            "Yaw": 90.0,
+            "Scale": 1.2,
+            "MaterialPath": "/Script/Engine.Material'/AirSim/VehicleAdv/SUV/AutomotiveMaterials/Materials/CarPaint/M_Carpaint_blue.M_Carpaint_blue'",
+            "MaterialElementIndex": 1
+        }
+    },
+    "SubWindows": [
+        {
+            "WindowID": 1,
+            "CameraName": "front_center_custom",
+            "ImageType": 0,
+            "Visible": false
+        }
+    ]
+}

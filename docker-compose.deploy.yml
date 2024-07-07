@@ -9,7 +9,7 @@ services:
       - "./adk/mission_briefing:/mission_briefing"
       - "./adk/output:/output"
     # command: "--mission_thread=maneuver_thread --mission_class=route_search --restart" # Comment when using custom mission config
-    command: "--mission_thread=maneuver_thread --mission_class=area_search --use_mission_briefing --restart" # Uncomment to use custom mission config
+    command: "--mission_thread=maneuver_thread --mission_class=area_search --restart" # Uncomment to use custom mission config
     ipc: host
     pid: host
     environment:
@@ -23,8 +23,8 @@ services:
               count: 1
               capabilities: [gpu]
   deployment:
-    image: ansr-collins
-    # image: darpaansr.azurecr.io/collins:maneuver-1.0.5 # Run specific tag
+    # image: ansr-collins
+    image: darpaansr.azurecr.io/collins:maneuver-1.0.5 # Run specific tag
     ipc: host
     pid: host
     volumes:
