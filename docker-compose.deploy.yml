@@ -3,12 +3,13 @@ version: "3.8"
 services:
   adk:
     # image: darpaansr.azurecr.io/adk:latest
-    image: darpaansr.azurecr.io/adk:2.1.5
+    # image: darpaansr.azurecr.io/adk:2.1.5
+    image: darpaansr.azurecr.io/adk:city1.0
     volumes:
       - "/tmp/.X11-unix:/tmp/.X11-unix:rw"
       - "./adk/mission_briefing:/mission_briefing"
       - "./adk/output:/output"
-    # command: "--mission_thread=maneuver_thread --mission_class=route_search --restart" # Comment when using custom mission config
+    # command: "--mission_thread=maneuver_thread --mission_class=area_search --restart" # Comment when using custom mission config
     command: "--mission_thread=maneuver_thread --mission_class=area_search --use_mission_briefing --restart" # Uncomment to use custom mission config
     ipc: host
     pid: host
