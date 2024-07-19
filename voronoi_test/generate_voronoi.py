@@ -29,7 +29,7 @@ def extract_points_from_image(image_path, max_points=10000):
         indices = np.random.choice(points.shape[0], max_points, replace=False)
         points = points[indices]
     
-    return corners
+    return canvas
 
 def plot_voronoi_on_image(image_path, points):
     vor = Voronoi(points)
@@ -52,4 +52,4 @@ def main(image_path):
 
 # Usage
 image_path = os.path.join(os.getcwd(), 'images' ,'voronoi_d0.png')
-main(image_path)
+#main(image_path)
