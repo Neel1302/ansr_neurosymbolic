@@ -2,7 +2,7 @@ version: "3.8"
 # name: ansr-collins
 services:
   adk:
-    # image: darpaansr.azurecr.io/adk:latest
+    # image: darpaansr.azurecr.io/adk:latest # Uncomment for Neighbourhood environment
     # image: darpaansr.azurecr.io/adk:2.1.5
     image: darpaansr.azurecr.io/adk:city1.0
     volumes:
@@ -14,7 +14,7 @@ services:
     ipc: host
     pid: host
     environment:
-      - DISPLAY
+      - DISPLAY # comment this our for headless mode
       - MAP_ALTITUDE=10
     deploy:
       resources:
@@ -24,7 +24,7 @@ services:
               count: 1
               capabilities: [gpu]
   deployment:
-    image: ansr-collins
+    image: ansr-collins # Uncomment for development
     # image: darpaansr.azurecr.io/collins:maneuver-1.0.5 # Run specific tag
     ipc: host
     pid: host
@@ -32,7 +32,7 @@ services:
       - "./adk/mission_briefing:/mission_briefing"
       - "/tmp/.X11-unix:/tmp/.X11-unix:rw"
     environment:
-      - DISPLAY
+      - DISPLAY # comment this our for headless mode
     deploy:
       resources:
         reservations:

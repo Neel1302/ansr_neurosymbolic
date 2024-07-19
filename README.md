@@ -102,6 +102,14 @@ In another terminal run the following compose file using: `docker compose -f doc
                 capabilities: [ gpu ]
   ```
 
+# Building
+
+Run the following in one terminal to build the container with local changes:
+
+```
+docker build -t ansr-collins .
+```
+
 # High-level overview of our code (inputs/outputs)
 
 Our main algorithm is housed inside the file named `waypoint_publisher.py` at `/home/performer/dev_ws/src/verifiable-compositional-rl/src/ansr_eval1/waypoint_publisher.py`.
