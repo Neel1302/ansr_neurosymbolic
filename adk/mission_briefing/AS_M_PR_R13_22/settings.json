@@ -1,0 +1,251 @@
+{
+    "SeeDocsAt": "https://github.com/Microsoft/AirSim/blob/main/docs/settings_json.md",
+    "SettingsVersion": 1.2,
+    "SimMode": "Multirotor",
+    "ClockSpeed": 1.0,
+    "TimeOfDay": {
+        "Enabled": false,
+        "StartDateTime": "2024-02-12 21:30:00",
+        "CelestialClockSpeed": 1,
+        "StartDateTimeDst": false,
+        "UpdateIntervalSecs": 60
+    },
+    "OriginGeopoint": {
+        "Latitude": 38.8816,
+        "Longitude": -77.091,
+        "Altitude": 100
+    },
+    "Vehicles": {
+        "SimpleFlight": {
+            "VehicleType": "SimpleFlight",
+            "DefaultVehicleState": "Armed",
+            "EnableCollisionPassthrogh": false,
+            "EnableCollisions": true,
+            "AllowAPIAlways": true,
+            "RC": {
+                "RemoteControlID": 0,
+                "AllowAPIWhenDisconnected": false
+            },
+            "Cameras": {
+                "front_center_custom": {
+                    "CaptureSettings": [
+                        {
+                            "PublishToRos": 1,
+                            "ImageType": 0,
+                            "Width": 640,
+                            "Height": 480,
+                            "FOV_Degrees": 60,
+                            "DepthOfFieldFstop": 2.8,
+                            "DepthOfFieldFocalDistance": 200.0,
+                            "DepthOfFieldFocalRegion": 200.0,
+                            "TargetGamma": 1.5,
+                            "detection radius meters": 25.0
+                        },
+                        {
+                            "PublishToRos": 1,
+                            "ImageType": 1,
+                            "Width": 640,
+                            "Height": 480,
+                            "FOV_Degrees": 60,
+                            "TargetGamma": 1.5
+                        },
+                        {
+                            "PublishToRos": 1,
+                            "ImageType": 5,
+                            "Width": 640,
+                            "Height": 480,
+                            "FOV_Degrees": 60,
+                            "TargetGamma": 1.5
+                        }
+                    ],
+                    "X": 0.4,
+                    "Y": 0,
+                    "Z": -0.2,
+                    "Pitch": 0,
+                    "Roll": 0,
+                    "Yaw": 0
+                }
+            }
+        },
+        "car000": {
+            "VehicleType": "envcar",
+            "X": 91.75,
+            "Y": 84.0,
+            "Z": -1.5,
+            "Yaw": 7.853981633974483,
+            "Scale": 1.2,
+            "MaterialPath": "/Script/Engine.Material'/AirSim/VehicleAdv/SUV/AutomotiveMaterials/Materials/CarPaint/M_Carpaint_orange.M_Carpaint_orange'",
+            "MaterialElementIndex": 1
+        },
+        "car001": {
+            "VehicleType": "envcar",
+            "X": -54.25,
+            "Y": -113.0,
+            "Z": -1.5,
+            "Yaw": 4.713981633974482,
+            "Scale": 1.2,
+            "MaterialPath": "/Script/Engine.Material'/AirSim/VehicleAdv/SUV/AutomotiveMaterials/Materials/CarPaint/M_Carpaint_blue.M_Carpaint_blue'",
+            "MaterialElementIndex": 1
+        },
+        "car002": {
+            "VehicleType": "envcar",
+            "X": 63.25,
+            "Y": 84.0,
+            "Z": -1.5,
+            "Yaw": 6.2839816339744825,
+            "ChassisMesh": "/Script/Engine.StaticMesh'/Game/Shelby/Shelby_chassis.Shelby_chassis'",
+            "WheelMesh": "/Script/Engine.StaticMesh'/Game/Shelby/Shelby_wheel.Shelby_wheel'",
+            "DistanceBetweenAxes": 380,
+            "DistanceBetweenWheels": 200,
+            "Scale": 1.0,
+            "MaterialPath": "/Script/Engine.Material'/AirSim/VehicleAdv/SUV/AutomotiveMaterials/Materials/CarPaint/M_Carpaint_white.M_Carpaint_white'",
+            "MaterialElementIndex": 8
+        },
+        "car003": {
+            "VehicleType": "envcar",
+            "X": 61.75,
+            "Y": 61.0,
+            "Z": -1.5,
+            "Yaw": 6.2839816339744825,
+            "Scale": 1.2,
+            "MaterialPath": "/Script/Engine.Material'/AirSim/VehicleAdv/SUV/AutomotiveMaterials/Materials/CarPaint/M_Carpaint_black.M_Carpaint_black'",
+            "MaterialElementIndex": 1
+        },
+        "non_target_0": {
+            "VehicleType": "envcar",
+            "X": 84.0,
+            "Y": 77.25,
+            "Z": 0.0,
+            "Yaw": 1.5707963267948966,
+            "ChassisMesh": "/Script/Engine.StaticMesh'/Game/Shelby/Shelby_chassis.Shelby_chassis'",
+            "WheelMesh": "/Script/Engine.StaticMesh'/Game/Shelby/Shelby_wheel.Shelby_wheel'",
+            "DistanceBetweenAxes": 380,
+            "DistanceBetweenWheels": 200,
+            "Scale": 1.0,
+            "MaterialPath": "/Script/Engine.Material'/AirSim/VehicleAdv/SUV/AutomotiveMaterials/Materials/CarPaint/M_Carpaint_green.M_Carpaint_green'",
+            "MaterialElementIndex": 8
+        },
+        "non_target_1": {
+            "VehicleType": "envcar",
+            "X": 67.75,
+            "Y": 64.5,
+            "Z": 0.0,
+            "Yaw": 0.0,
+            "ChassisMesh": "/Script/Engine.StaticMesh'/Game/Shelby/Shelby_chassis.Shelby_chassis'",
+            "WheelMesh": "/Script/Engine.StaticMesh'/Game/Shelby/Shelby_wheel.Shelby_wheel'",
+            "DistanceBetweenAxes": 380,
+            "DistanceBetweenWheels": 200,
+            "Scale": 1.0,
+            "MaterialPath": "/Script/Engine.Material'/AirSim/VehicleAdv/SUV/AutomotiveMaterials/Materials/CarPaint/M_Carpaint_yellow.M_Carpaint_yellow'",
+            "MaterialElementIndex": 8
+        },
+        "non_target_2": {
+            "VehicleType": "envcar",
+            "X": 83.75,
+            "Y": -45.5,
+            "Z": 0.0,
+            "Yaw": 1.5707963267948966,
+            "ChassisMesh": "/Script/Engine.StaticMesh'/Game/Shelby/Shelby_chassis.Shelby_chassis'",
+            "WheelMesh": "/Script/Engine.StaticMesh'/Game/Shelby/Shelby_wheel.Shelby_wheel'",
+            "DistanceBetweenAxes": 380,
+            "DistanceBetweenWheels": 200,
+            "Scale": 1.0,
+            "MaterialPath": "/Script/Engine.Material'/AirSim/VehicleAdv/SUV/AutomotiveMaterials/Materials/CarPaint/M_Carpaint_black.M_Carpaint_black'",
+            "MaterialElementIndex": 8
+        },
+        "non_target_3": {
+            "VehicleType": "envcar",
+            "X": 61.25,
+            "Y": 36.0,
+            "Z": 0.0,
+            "Yaw": 1.5707963267948966,
+            "ChassisMesh": "/Script/Engine.StaticMesh'/Game/Shelby/Shelby_chassis.Shelby_chassis'",
+            "WheelMesh": "/Script/Engine.StaticMesh'/Game/Shelby/Shelby_wheel.Shelby_wheel'",
+            "DistanceBetweenAxes": 380,
+            "DistanceBetweenWheels": 200,
+            "Scale": 1.0,
+            "MaterialPath": "/Script/Engine.Material'/AirSim/VehicleAdv/SUV/AutomotiveMaterials/Materials/CarPaint/M_Carpaint_blue.M_Carpaint_blue'",
+            "MaterialElementIndex": 8
+        },
+        "non_target_4": {
+            "VehicleType": "envcar",
+            "X": -158.0,
+            "Y": -41.25,
+            "Z": 0.0,
+            "Yaw": 0.0,
+            "Scale": 1.2,
+            "MaterialPath": "/Script/Engine.Material'/AirSim/VehicleAdv/SUV/AutomotiveMaterials/Materials/CarPaint/M_Carpaint_red.M_Carpaint_red'",
+            "MaterialElementIndex": 1
+        },
+        "non_target_5": {
+            "VehicleType": "envcar",
+            "X": -170.5,
+            "Y": -32.25,
+            "Z": 0.0,
+            "Yaw": -1.5707963267948966,
+            "ChassisMesh": "/Script/Engine.StaticMesh'/Game/Shelby/Shelby_chassis.Shelby_chassis'",
+            "WheelMesh": "/Script/Engine.StaticMesh'/Game/Shelby/Shelby_wheel.Shelby_wheel'",
+            "DistanceBetweenAxes": 380,
+            "DistanceBetweenWheels": 200,
+            "Scale": 1.0,
+            "MaterialPath": "/Script/Engine.Material'/AirSim/VehicleAdv/SUV/AutomotiveMaterials/Materials/CarPaint/M_Carpaint_violet.M_Carpaint_violet'",
+            "MaterialElementIndex": 8
+        },
+        "non_target_6": {
+            "VehicleType": "envcar",
+            "X": -187.0,
+            "Y": -130.25,
+            "Z": 0.0,
+            "Yaw": 0.0,
+            "Scale": 1.2,
+            "MaterialPath": "/Script/Engine.Material'/AirSim/VehicleAdv/SUV/AutomotiveMaterials/Materials/CarPaint/M_Carpaint_violet.M_Carpaint_violet'",
+            "MaterialElementIndex": 1
+        },
+        "non_target_7": {
+            "VehicleType": "envcar",
+            "X": 68.75,
+            "Y": -30.0,
+            "Z": 0.0,
+            "Yaw": 1.5707963267948966,
+            "ChassisMesh": "/Script/Engine.StaticMesh'/Game/Shelby/Shelby_chassis.Shelby_chassis'",
+            "WheelMesh": "/Script/Engine.StaticMesh'/Game/Shelby/Shelby_wheel.Shelby_wheel'",
+            "DistanceBetweenAxes": 380,
+            "DistanceBetweenWheels": 200,
+            "Scale": 1.0,
+            "MaterialPath": "/Script/Engine.Material'/AirSim/VehicleAdv/SUV/AutomotiveMaterials/Materials/CarPaint/M_Carpaint_orange.M_Carpaint_orange'",
+            "MaterialElementIndex": 8
+        },
+        "non_target_8": {
+            "VehicleType": "envcar",
+            "X": 39.25,
+            "Y": 34.75,
+            "Z": 0.0,
+            "Yaw": 3.141592653589793,
+            "ChassisMesh": "/Script/Engine.StaticMesh'/Game/Shelby/Shelby_chassis.Shelby_chassis'",
+            "WheelMesh": "/Script/Engine.StaticMesh'/Game/Shelby/Shelby_wheel.Shelby_wheel'",
+            "DistanceBetweenAxes": 380,
+            "DistanceBetweenWheels": 200,
+            "Scale": 1.0,
+            "MaterialPath": "/Script/Engine.Material'/AirSim/VehicleAdv/SUV/AutomotiveMaterials/Materials/CarPaint/M_Carpaint_red.M_Carpaint_red'",
+            "MaterialElementIndex": 8
+        },
+        "non_target_9": {
+            "VehicleType": "envcar",
+            "X": 66.25,
+            "Y": 91.5,
+            "Z": 0.0,
+            "Yaw": 0.0,
+            "Scale": 1.2,
+            "MaterialPath": "/Script/Engine.Material'/AirSim/VehicleAdv/SUV/AutomotiveMaterials/Materials/CarPaint/M_Carpaint_white.M_Carpaint_white'",
+            "MaterialElementIndex": 1
+        }
+    },
+    "SubWindows": [
+        {
+            "WindowID": 1,
+            "CameraName": "front_center_custom",
+            "ImageType": 0,
+            "Visible": false
+        }
+    ]
+}

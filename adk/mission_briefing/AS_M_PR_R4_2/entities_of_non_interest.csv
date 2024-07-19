@@ -1,0 +1,4 @@
+id,type,color,x,y,z,yaw
+non_target_0,SEDAN,green,-30.25,-74.75,0,0
+non_target_1,SUV,red,-49,-58.75,0,1.5707963267948966
+non_target_2,SUV,black,99.75,111.5,0,-1.5707963267948966

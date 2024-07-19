@@ -1,0 +1,4 @@
+id,type,color,x,y,z,yaw
+non_target_0,SUV,yellow,-49.75,-91.25,0,3.141592653589793
+non_target_1,SUV,black,-40.75,-94.25,0,3.141592653589793
+non_target_2,SUV,violet,99.75,111.5,0,-1.5707963267948966

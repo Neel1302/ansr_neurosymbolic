@@ -1,0 +1,541 @@
+{
+  "scenario_id": "AS_M_PR_R0_6",
+  "mission_class": "Area Search",
+  "scenario_objective": {
+    "objective_name": "locate_static_target",
+    "routes_of_interest": [],
+    "areas_of_interest": [
+      {
+        "polygon_vertices": [
+          [
+            [
+              0.0,
+              -100.0
+            ],
+            [
+              -50.0,
+              -100.0
+            ],
+            [
+              -50.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              -100.0
+            ]
+          ]
+        ],
+        "no_earlier_than": [],
+        "no_later_than": []
+      },
+      {
+        "polygon_vertices": [
+          [
+            [
+              100.0,
+              -50.0
+            ],
+            [
+              0.0,
+              -50.0
+            ],
+            [
+              0.0,
+              50.0
+            ],
+            [
+              100.0,
+              50.0
+            ],
+            [
+              100.0,
+              -50.0
+            ]
+          ]
+        ],
+        "no_earlier_than": [],
+        "no_later_than": []
+      },
+      {
+        "polygon_vertices": [
+          [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              -150.0,
+              0.0
+            ],
+            [
+              -150.0,
+              50.0
+            ],
+            [
+              0.0,
+              50.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ]
+        ],
+        "no_earlier_than": [],
+        "no_later_than": []
+      }
+    ],
+    "entities_of_interest": [
+      {
+        "entity_id": "car000",
+        "entity_type": "car",
+        "attributes": {
+          "color": "blue",
+          "class": "SEDAN"
+        },
+        "priority": 1.0,
+        "no_earlier_than": [],
+        "no_later_than": [],
+        "entity_priors": {
+          "location_belief_map": [
+            {
+              "polygon_vertices": [
+                [
+                  [
+                    0.0,
+                    -100.0
+                  ],
+                  [
+                    -50.0,
+                    -100.0
+                  ],
+                  [
+                    -50.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -100.0
+                  ]
+                ]
+              ],
+              "probability": 0.20628964861332683
+            },
+            {
+              "polygon_vertices": [
+                [
+                  [
+                    100.0,
+                    -50.0
+                  ],
+                  [
+                    0.0,
+                    -50.0
+                  ],
+                  [
+                    0.0,
+                    50.0
+                  ],
+                  [
+                    100.0,
+                    50.0
+                  ],
+                  [
+                    100.0,
+                    -50.0
+                  ]
+                ]
+              ],
+              "probability": 0.5782856101467487
+            },
+            {
+              "polygon_vertices": [
+                [
+                  [
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -150.0,
+                    0.0
+                  ],
+                  [
+                    -150.0,
+                    50.0
+                  ],
+                  [
+                    0.0,
+                    50.0
+                  ],
+                  [
+                    0.0,
+                    0.0
+                  ]
+                ]
+              ],
+              "probability": 0.21542474123992444
+            }
+          ]
+        }
+      },
+      {
+        "entity_id": "car001",
+        "entity_type": "car",
+        "attributes": {
+          "color": "black",
+          "class": "SEDAN"
+        },
+        "priority": 1.0,
+        "no_earlier_than": [],
+        "no_later_than": [],
+        "entity_priors": {
+          "location_belief_map": [
+            {
+              "polygon_vertices": [
+                [
+                  [
+                    0.0,
+                    -100.0
+                  ],
+                  [
+                    -50.0,
+                    -100.0
+                  ],
+                  [
+                    -50.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -100.0
+                  ]
+                ]
+              ],
+              "probability": 0.17472207390085034
+            },
+            {
+              "polygon_vertices": [
+                [
+                  [
+                    100.0,
+                    -50.0
+                  ],
+                  [
+                    0.0,
+                    -50.0
+                  ],
+                  [
+                    0.0,
+                    50.0
+                  ],
+                  [
+                    100.0,
+                    50.0
+                  ],
+                  [
+                    100.0,
+                    -50.0
+                  ]
+                ]
+              ],
+              "probability": 0.6374059609861215
+            },
+            {
+              "polygon_vertices": [
+                [
+                  [
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -150.0,
+                    0.0
+                  ],
+                  [
+                    -150.0,
+                    50.0
+                  ],
+                  [
+                    0.0,
+                    50.0
+                  ],
+                  [
+                    0.0,
+                    0.0
+                  ]
+                ]
+              ],
+              "probability": 0.18787196511302814
+            }
+          ]
+        }
+      },
+      {
+        "entity_id": "car002",
+        "entity_type": "car",
+        "attributes": {
+          "color": "yellow",
+          "class": "SUV"
+        },
+        "priority": 1.0,
+        "no_earlier_than": [],
+        "no_later_than": [],
+        "entity_priors": {
+          "location_belief_map": [
+            {
+              "polygon_vertices": [
+                [
+                  [
+                    0.0,
+                    -100.0
+                  ],
+                  [
+                    -50.0,
+                    -100.0
+                  ],
+                  [
+                    -50.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -100.0
+                  ]
+                ]
+              ],
+              "probability": 0.14174994990457102
+            },
+            {
+              "polygon_vertices": [
+                [
+                  [
+                    100.0,
+                    -50.0
+                  ],
+                  [
+                    0.0,
+                    -50.0
+                  ],
+                  [
+                    0.0,
+                    50.0
+                  ],
+                  [
+                    100.0,
+                    50.0
+                  ],
+                  [
+                    100.0,
+                    -50.0
+                  ]
+                ]
+              ],
+              "probability": 0.5516865229913233
+            },
+            {
+              "polygon_vertices": [
+                [
+                  [
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -150.0,
+                    0.0
+                  ],
+                  [
+                    -150.0,
+                    50.0
+                  ],
+                  [
+                    0.0,
+                    50.0
+                  ],
+                  [
+                    0.0,
+                    0.0
+                  ]
+                ]
+              ],
+              "probability": 0.3065635271041058
+            }
+          ]
+        }
+      },
+      {
+        "entity_id": "car003",
+        "entity_type": "car",
+        "attributes": {
+          "color": "violet",
+          "class": "SUV"
+        },
+        "priority": 1.0,
+        "no_earlier_than": [],
+        "no_later_than": [],
+        "entity_priors": {
+          "location_belief_map": [
+            {
+              "polygon_vertices": [
+                [
+                  [
+                    0.0,
+                    -100.0
+                  ],
+                  [
+                    -50.0,
+                    -100.0
+                  ],
+                  [
+                    -50.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -100.0
+                  ]
+                ]
+              ],
+              "probability": 0.2463657211241018
+            },
+            {
+              "polygon_vertices": [
+                [
+                  [
+                    100.0,
+                    -50.0
+                  ],
+                  [
+                    0.0,
+                    -50.0
+                  ],
+                  [
+                    0.0,
+                    50.0
+                  ],
+                  [
+                    100.0,
+                    50.0
+                  ],
+                  [
+                    100.0,
+                    -50.0
+                  ]
+                ]
+              ],
+              "probability": 0.6190712239915657
+            },
+            {
+              "polygon_vertices": [
+                [
+                  [
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    -150.0,
+                    0.0
+                  ],
+                  [
+                    -150.0,
+                    50.0
+                  ],
+                  [
+                    0.0,
+                    50.0
+                  ],
+                  [
+                    0.0,
+                    0.0
+                  ]
+                ]
+              ],
+              "probability": 0.1345630548843324
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "scenario_constraints": {
+    "spatial_constraints": {
+      "keep_out_zones": [
+        {
+          "keep_out_polygon_vertices": [
+            [
+              250.0,
+              -200.0
+            ],
+            [
+              100.0,
+              -200.0
+            ],
+            [
+              100.0,
+              -50.0
+            ],
+            [
+              250.0,
+              -50.0
+            ],
+            [
+              250.0,
+              -200.0
+            ]
+          ],
+          "no_earlier_than": [],
+          "no_later_than": []
+        },
+        {
+          "keep_out_polygon_vertices": [
+            [
+              150.0,
+              50.0
+            ],
+            [
+              0.0,
+              50.0
+            ],
+            [
+              0.0,
+              200.0
+            ],
+            [
+              150.0,
+              200.0
+            ],
+            [
+              150.0,
+              50.0
+            ]
+          ],
+          "no_earlier_than": [],
+          "no_later_than": []
+        }
+      ],
+      "stay_within_zones": []
+    }
+  },
+  "scenario_thread": "maneuver_thread",
+  "pre_mission_context": []
+}

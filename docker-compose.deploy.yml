@@ -2,18 +2,20 @@ version: "3.8"
 # name: ansr-collins
 services:
   adk:
-    # image: darpaansr.azurecr.io/adk:latest
-    image: darpaansr.azurecr.io/adk:2.1.5
+    # image: darpaansr.azurecr.io/adk:latest # Uncomment for Neighbourhood environment
+    # image: darpaansr.azurecr.io/adk:2.1.5
+    image: darpaansr.azurecr.io/adk:city1.0
     volumes:
       - "/tmp/.X11-unix:/tmp/.X11-unix:rw"
       - "./adk/mission_briefing:/mission_briefing"
       - "./adk/output:/output"
-    # command: "--mission_thread=manuever_thread --mission_class=area_search --restart" # Comment when using custom mission config
+    # command: "--mission_thread=maneuver_thread --mission_class=area_search --restart" # Comment when using custom mission config
     command: "--mission_thread=maneuver_thread --mission_class=area_search --use_mission_briefing --restart" # Uncomment to use custom mission config
     ipc: host
     pid: host
     environment:
-      - DISPLAY
+      - DISPLAY # comment this our for headless mode
+      - MAP_ALTITUDE=10
     deploy:
       resources:
         reservations:
@@ -22,12 +24,15 @@ services:
               count: 1
               capabilities: [gpu]
   deployment:
-    image: ansr-collins
-    # image: darpaansr.azurecr.io/collins:maneuver-1.0.3 # Run specific tag
+    image: ansr-collins # Uncomment for development
+    # image: darpaansr.azurecr.io/collins:maneuver-1.0.5 # Run specific tag
     ipc: host
     pid: host
     volumes:
       - "./adk/mission_briefing:/mission_briefing"
+      - "/tmp/.X11-unix:/tmp/.X11-unix:rw"
+    environment:
+      - DISPLAY # comment this our for headless mode
     deploy:
       resources:
         reservations:

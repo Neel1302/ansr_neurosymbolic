@@ -72,6 +72,44 @@ Since we are a manuever thread performer for evaluation 1, you may echo the `adk
   (in the container) ros2 topic echo adk_node/input/waypoints
   ```
 
+To run in headless mode use the following compose file instead:
+
+Run the following in one terminal:
+
+ ```
+ cd ta3-documentation
+ sh start_adk_sparse_manuever.sh --mission_thread=manuever_thread -f 20
+ ```
+
+In another terminal run the following compose file using: `docker compose -f docker-compose.deploy.yml up`:
+
+  ```
+  version: "3.8"
+  # name: ansr-collins
+  services:
+    deployment:
+      image: darpaansr.azurecr.io/collins:maneuver-1.0.5
+      ipc: host
+      pid: host
+      volumes:
+        - "./adk/mission_briefing:/mission_briefing"
+      deploy:
+        resources:
+          reservations:
+            devices:
+              - driver: nvidia
+                count: 1
+                capabilities: [ gpu ]
+  ```
+
+# Building
+
+Run the following in one terminal to build the container with local changes:
+
+```
+docker build -t ansr-collins .
+```
+
 # High-level overview of our code (inputs/outputs)
 
 Our main algorithm is housed inside the file named `waypoint_publisher.py` at `/home/performer/dev_ws/src/verifiable-compositional-rl/src/ansr_eval1/waypoint_publisher.py`.

@@ -90,6 +90,20 @@
                     "Yaw": 0
                 }
             }
+        },
+        "Car4006": {
+            "VehicleType": "envcar",
+            "X": -310.375,
+            "Y": -150.125,
+            "Z": 0.0,
+            "Yaw": 0.0,
+            "ChassisMesh": "/Script/Engine.StaticMesh'/Game/Shelby/Shelby_chassis.Shelby_chassis'",
+            "WheelMesh": "/Script/Engine.StaticMesh'/Game/Shelby/Shelby_wheel.Shelby_wheel'",
+            "DistanceBetweenAxes": 380,
+            "DistanceBetweenWheels": 200,
+            "Scale": 1.0,
+            "MaterialPath": "/Script/Engine.Material'/AirSim/VehicleAdv/SUV/AutomotiveMaterials/Materials/CarPaint/M_Carpaint_red.M_Carpaint_red'",
+            "MaterialElementIndex": 8
         }
     },
     "SubWindows": [
