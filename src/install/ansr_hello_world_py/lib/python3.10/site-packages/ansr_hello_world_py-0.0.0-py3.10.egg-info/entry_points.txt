@@ -1,0 +1,3 @@
+[console_scripts]
+publisher = ansr_hello_world_py.publisher:main
+

@@ -1,0 +1,7 @@
+setuptools
+transformers[torch]
+torchvision
+torch
+Pillow
+numpy
+opencv-python

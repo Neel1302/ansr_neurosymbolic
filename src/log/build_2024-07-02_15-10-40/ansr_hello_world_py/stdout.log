@@ -1,0 +1,35 @@
+running egg_info
+creating ../build/ansr_hello_world_py/ansr_hello_world_py.egg-info
+writing ../build/ansr_hello_world_py/ansr_hello_world_py.egg-info/PKG-INFO
+writing dependency_links to ../build/ansr_hello_world_py/ansr_hello_world_py.egg-info/dependency_links.txt
+writing entry points to ../build/ansr_hello_world_py/ansr_hello_world_py.egg-info/entry_points.txt
+writing requirements to ../build/ansr_hello_world_py/ansr_hello_world_py.egg-info/requires.txt
+writing top-level names to ../build/ansr_hello_world_py/ansr_hello_world_py.egg-info/top_level.txt
+writing manifest file '../build/ansr_hello_world_py/ansr_hello_world_py.egg-info/SOURCES.txt'
+reading manifest file '../build/ansr_hello_world_py/ansr_hello_world_py.egg-info/SOURCES.txt'
+writing manifest file '../build/ansr_hello_world_py/ansr_hello_world_py.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/joshua-huang/Documents/GitHub/ansr_neurosymbolic/src/build/ansr_hello_world_py/build
+creating /home/joshua-huang/Documents/GitHub/ansr_neurosymbolic/src/build/ansr_hello_world_py/build/lib
+creating /home/joshua-huang/Documents/GitHub/ansr_neurosymbolic/src/build/ansr_hello_world_py/build/lib/ansr_hello_world_py
+copying ansr_hello_world_py/__init__.py -> /home/joshua-huang/Documents/GitHub/ansr_neurosymbolic/src/build/ansr_hello_world_py/build/lib/ansr_hello_world_py
+copying ansr_hello_world_py/publisher.py -> /home/joshua-huang/Documents/GitHub/ansr_neurosymbolic/src/build/ansr_hello_world_py/build/lib/ansr_hello_world_py
+running install
+running install_lib
+creating /home/joshua-huang/Documents/GitHub/ansr_neurosymbolic/src/install/ansr_hello_world_py/lib/python3.10/site-packages/ansr_hello_world_py
+copying /home/joshua-huang/Documents/GitHub/ansr_neurosymbolic/src/build/ansr_hello_world_py/build/lib/ansr_hello_world_py/__init__.py -> /home/joshua-huang/Documents/GitHub/ansr_neurosymbolic/src/install/ansr_hello_world_py/lib/python3.10/site-packages/ansr_hello_world_py
+copying /home/joshua-huang/Documents/GitHub/ansr_neurosymbolic/src/build/ansr_hello_world_py/build/lib/ansr_hello_world_py/publisher.py -> /home/joshua-huang/Documents/GitHub/ansr_neurosymbolic/src/install/ansr_hello_world_py/lib/python3.10/site-packages/ansr_hello_world_py
+byte-compiling /home/joshua-huang/Documents/GitHub/ansr_neurosymbolic/src/install/ansr_hello_world_py/lib/python3.10/site-packages/ansr_hello_world_py/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/joshua-huang/Documents/GitHub/ansr_neurosymbolic/src/install/ansr_hello_world_py/lib/python3.10/site-packages/ansr_hello_world_py/publisher.py to publisher.cpython-310.pyc
+running install_data
+creating /home/joshua-huang/Documents/GitHub/ansr_neurosymbolic/src/install/ansr_hello_world_py/share/ament_index
+creating /home/joshua-huang/Documents/GitHub/ansr_neurosymbolic/src/install/ansr_hello_world_py/share/ament_index/resource_index
+creating /home/joshua-huang/Documents/GitHub/ansr_neurosymbolic/src/install/ansr_hello_world_py/share/ament_index/resource_index/packages
+copying resource/ansr_hello_world_py -> /home/joshua-huang/Documents/GitHub/ansr_neurosymbolic/src/install/ansr_hello_world_py/share/ament_index/resource_index/packages
+copying package.xml -> /home/joshua-huang/Documents/GitHub/ansr_neurosymbolic/src/install/ansr_hello_world_py/share/ansr_hello_world_py
+running install_egg_info
+Copying ../build/ansr_hello_world_py/ansr_hello_world_py.egg-info to /home/joshua-huang/Documents/GitHub/ansr_neurosymbolic/src/install/ansr_hello_world_py/lib/python3.10/site-packages/ansr_hello_world_py-0.0.0-py3.10.egg-info
+running install_scripts
+Installing publisher script to /home/joshua-huang/Documents/GitHub/ansr_neurosymbolic/src/install/ansr_hello_world_py/lib/ansr_hello_world_py
+writing list of installed files to '/home/joshua-huang/Documents/GitHub/ansr_neurosymbolic/src/build/ansr_hello_world_py/install.log'
