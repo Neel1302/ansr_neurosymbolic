@@ -28,15 +28,20 @@ def extract_corners_canny(image_path, max_points=10000):
     
     return output_edge_points
 
-def extract_corners_contours(image_path):
+def extract_contours(image_path):
     image = cv2.imread(image_path)
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     edges = cv2.Canny(gray, threshold1=100, threshold2=200)
+    _, thresholded = cv2.threshold(gray, 127, 255, cv2.THRESH_BINARY)
 
     contours, _ = cv2.findContours(edges, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    bound_contours, _ = cv2.findContours(thresholded, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+
+    all_contours = contours + bound_contours
+    valid_contours = [contour for contour in all_contours if len(contour) >= 4]
 
     points_list = []
-    for contour in contours:
+    for contour in all_contours:
         for point in contour:
             points_list.append(point[0])
 
@@ -45,43 +50,63 @@ def extract_corners_contours(image_path):
     print(points_array)
 
     image_contours = image.copy()
-    cv2.drawContours(image_contours, contours, -1, (0, 255, 0), 2)
+    cv2.drawContours(image_contours, valid_contours, -1, (0, 255, 0), 2)
+    
 
     # Display the result
     cv2.imshow('Detected Edges', image_contours)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 
-    return points_array
+    return valid_contours
 
-def extrat_border_countors(image_path):
+def extract_border_contours(image_path):
     image = cv2.imread(image_path)
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-    _, tresholded = cv2.threshold(gray, 127, 255, cv2.THRESH_BINARY)
+    
+    # Apply binary threshold to get binary image
+    _, thresholded = cv2.threshold(gray, 127, 255, cv2.THRESH_BINARY)
 
-    contours, _ = cv2.findContours(tresholded, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-    contour_points = []
-    for contour in contours:
+    # Find external contours
+    external_contours, _ = cv2.findContours(thresholded, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+
+    # Find internal contours
+    internal_contours, _ = cv2.findContours(cv2.bitwise_not(thresholded), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    
+    # Extract points of all contours
+    boundary_points = []
+    object_points = []
+    for contour in external_contours:
         for point in contour:
-            contour_points.append(point[0])
+            boundary_points.append(point[0])
     
-    contour_points = np.array(contour_points)
+    for contour in internal_contours:
+        for point in contour:
+            object_points.append(point[0])
     
-    #return 2D array of points
-    #output_border = contours.reshape(contours.shape[0], 2)
-    contour_image = image.copy()
-    cv2.drawContours(contour_image, contours, -1, (0, 255, 0), 3)
+    boundary_points = np.array(boundary_points)
+    object_points = np.array(object_points)
 
+    # Draw contours for visualization
+    contour_image = image.copy()
+    cv2.drawContours(contour_image, external_contours, -1, (0, 255, 0), 3)  # Green for boundary
+    cv2.drawContours(contour_image, internal_contours, -1, (255, 0, 0), 3)  # Blue for objects
+
+    # Visualize the contours
     plt.figure(figsize=(10, 10))
     plt.imshow(cv2.cvtColor(contour_image, cv2.COLOR_BGR2RGB))
     plt.title('Image with Contours')
     plt.axis('off')
     plt.show()
 
-    #returns list of border points
-    print(contour_points.shape)
-    print(contour_points)
-    return np.array(contour_points)
+    # Print the shapes and points for debugging
+    print("Boundary Points Shape:", boundary_points.shape)
+    print("Boundary Points:\n", boundary_points)
+    print("Object Points Shape:", object_points.shape)
+    print("Object Points:\n", object_points)
+
+    # Return the list of boundary points and object points
+    return boundary_points, object_points
 
 def main(image_path):
     points = extract_corners_canny(image_path)
@@ -90,8 +115,9 @@ def main(image_path):
     #plot_voronoi_on_image(image_path, points)
 
 # Usage
-image_path = os.path.join(os.getcwd(), 'images' ,'voronoi_d0.png')
-#main(image_path
+#image_path = os.path.join(os.getcwd(), 'images' ,'voronoi_d0.png')
+image_path = os.path.join(os.getcwd(), 'images' ,'city_map.png')
+#main(image_path)
 #extract_corners_canny(image_path)
-#extract_corners_contours(image_path)
-extrat_border_countors(image_path)
+extract_contours(image_path)
+#extract_border_contours(image_path)

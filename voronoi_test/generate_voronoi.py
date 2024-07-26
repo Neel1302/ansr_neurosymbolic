@@ -51,5 +51,6 @@ def main(image_path):
     #plot_voronoi_on_image(image_path, points)
 
 # Usage
-image_path = os.path.join(os.getcwd(), 'images' ,'voronoi_d0.png')
+#image_path = os.path.join(os.getcwd(), 'images' ,'voronoi_d0.png')
+image_path = os.path.join(os.getcwd(), 'images' ,'city_map.png')
 #main(image_path)
